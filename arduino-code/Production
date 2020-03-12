@@ -1,0 +1,79 @@
+//include libraries
+#include <Adafruit_GFX.h>
+#include <Adafruit_LEDBackpack.h>
+
+Adafruit_AlphaNum4 alpha4 = Adafruit_AlphaNum4();
+
+const int scoreSwitch = 5;    //pin for switch  "11 or 21" as end of game
+const int buttonP1 = 2;       //pin for P1 button
+const int buttonP2 = 3;       //pin for P2 button
+
+int scoreP1 = 0;
+int scoreP2 = 0;
+int buttonP1State = 0;
+int buttonP2State = 0;
+int scoreTo = 11;
+
+
+void setup() {
+  
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonP1, INPUT);
+  pinMode(buttonP2, INPUT);
+
+  displayOn();
+}
+
+
+void loop() {
+  
+  // read the state of the pushbutton value:
+  buttonP1State = digitalRead(buttonP1);
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonP1State == HIGH) {
+    // turn LED on:
+    scoreP1++;
+  } else {
+
+  }
+  
+  // read the state of the pushbutton value:
+   buttonP2State = digitalRead(buttonP2);
+    if (buttonP2State == HIGH) {
+    // turn LED on:
+    scoreP2++;
+  } else {
+
+  }
+
+  alpha4.writeDigitAscii(0, (scoreP1 % 100 / 10) + '0');
+  alpha4.writeDigitAscii(1, (scoreP1 % 10) + '0');
+  
+  alpha4.writeDigitAscii(2, (scoreP2 % 100 / 10) + '0');
+  alpha4.writeDigitAscii(3, (scoreP2 % 10) + '0');
+
+  //push display data to display
+  alpha4.writeDisplay();
+
+  //wait .15 sec to eliminate phantom reads
+  delay(200);
+
+}
+
+void displayOn() {
+  //set BAUD rate
+  Serial.begin(9600);
+  
+  //start display
+  alpha4.begin(0x70);
+
+  //write zeros to all positions
+  alpha4.writeDigitAscii(0, '0');
+  alpha4.writeDigitAscii(1, '0');
+  alpha4.writeDigitAscii(2, '0');
+  alpha4.writeDigitAscii(3, '0');
+  
+  //display newly written values
+  alpha4.writeDisplay();
+}
