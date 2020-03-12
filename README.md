@@ -3,13 +3,17 @@ Arduino + Quad Alphanumeric Display w/ I2C Backpack https://www.adafruit.com/pro
 
 Functionality
   Game Modes
-    • 1st to 11 win by 2
-    • 1st to 21 win by 2
+  <ul>
+    <li>1st to 11 win by 2</li>
+    <li>1st to 21 win by 2</li>
+  </ul>
    Scoring
    <ul>
-  <ul><li>2 Physical Buttons - 1 Per Player</li></ul>
-      <li>• 1 short press - Increase score by 1 point</li>
-      <li>• 1 long press  - Remove score by 1 point</li>
-     <li> • Both buttons long press same time - Start New Game</li>
+  <ul>
+    <li>2 Physical Buttons - 1 Per Player</li>
+  </ul>
+      <li>1 short press - Increase score by 1 point</li>
+      <li>1 long press  - Remove score by 1 point</li>
+      <li>Both buttons long press same time - Start New Game</li>
 </ul>
 
