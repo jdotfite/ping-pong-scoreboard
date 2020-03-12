@@ -7,11 +7,8 @@ Functionality
     <li>1st to 11 win by 2</li>
     <li>1st to 21 win by 2</li>
   </ul>
-   Scoring
+   Scoring - 2 Physical Buttons - 1 Per Player
    <ul>
-  <ul>
-    <li>2 Physical Buttons - 1 Per Player</li>
-  </ul>
       <li>1 short press - Increase score by 1 point</li>
       <li>1 long press  - Remove score by 1 point</li>
       <li>Both buttons long press same time - Start New Game</li>
