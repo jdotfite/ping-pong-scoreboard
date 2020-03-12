@@ -1,7 +1,7 @@
-Arduino Table Tennis Scoreboard
-Arduino + Quad Alphanumeric Display w/ I2C Backpack https://www.adafruit.com/product/1911
+<h1>Arduino Table Tennis Scoreboard</h1>
+<p>Arduino + Quad Alphanumeric Display w/ I2C Backpack https://www.adafruit.com/product/1911M</p>
 
-Functionality
+<h2>Functionality</h2>
   Game Modes
   <ul>
     <li>1st to 11 win by 2</li>
