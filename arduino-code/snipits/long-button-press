@@ -1,0 +1,9 @@
+Long Button Press Code
+
+btnVal = digitalRead(btnPin);
+if (btnVal == HIGH) {    // assumes btn is LOW when pressed
+   lastBtnPressMillis = millis();   // btn not pressed so reset clock
+}
+if (millis() - lastBtnPressMillis > = interval) {
+   // button has been pressed for longer than interval
+}
